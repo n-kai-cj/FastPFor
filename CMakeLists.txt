@@ -118,6 +118,16 @@ add_library(FastPFOR STATIC
     src/varintdecode.c
     src/streamvbyte.c)
 set_target_properties(FastPFOR PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
+add_library(FastPFOR_shared SHARED
+    src/bitpacking.cpp
+    src/bitpackingaligned.cpp
+    src/bitpackingunaligned.cpp
+    src/horizontalbitpacking.cpp
+    src/simdunalignedbitpacking.cpp
+    src/simdbitpacking.cpp
+    src/varintdecode.c
+    src/streamvbyte.c)
+set_target_properties(FastPFOR_shared PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
 
 
 # other executables
